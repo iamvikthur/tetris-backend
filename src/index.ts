@@ -63,6 +63,7 @@ bot.on('callback_query', async (callbackQuery: any) => {
 
 //prod mode (Vercel)
 export const startVercel = async (req: VercelRequest, res: VercelResponse) => {
+  console.log('INSIDE START VERCEL');
   await production(req, res, bot);
 };
 //dev mode
