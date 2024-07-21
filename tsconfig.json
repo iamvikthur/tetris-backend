@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "esnext",
+    "target": "ES6",
     "moduleResolution": "node",
     "module": "commonjs",
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "public",
