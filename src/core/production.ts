@@ -15,8 +15,6 @@ const production = async (
   debug('Bot runs in production mode');
   debug(`setting webhook: ${VERCEL_URL}`);
 
-  console.log('INSIDE PRODUCTION');
-
   if (!VERCEL_URL) {
     throw new Error('VERCEL_URL is not set.');
   }
@@ -30,7 +28,6 @@ const production = async (
   }
 
   if (req.method === 'POST') {
-    console.log('RECEIVED POST REQUEST');
     await bot.processUpdate(req.body);
   } else {
     res.status(200).json('Listening to bot events...');
